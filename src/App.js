@@ -24,29 +24,6 @@ const food = [
   }
 ]
 
-const days = {
-  "10. Nov": { selected: "Standard" },
-  "11. Nov": { selected: "Vegetarisch" },
-  "12. Nov": { selected: undefined },
-  "13. Nov": { selected: "Fleisch" },
-  "14. Nov": { selected: "Vegetarisch" },
-  "15. Nov": { selected: "Standard" },
-  "16. Nov": { selected: "Vegetarisch" },
-  "17. Nov": { selected: undefined },
-  "18. Nov": { selected: "Fleisch" },
-  "19. Nov": { selected: "Vegetarisch" },
-  "20. Nov": { selected: "Standard" },
-  "21. Nov": { selected: "Vegetarisch" },
-  "22. Nov": { selected: undefined },
-  "23. Nov": { selected: "Fleisch" },
-  "24. Nov": { selected: "Vegetarisch" },
-  "25. Nov": { selected: "Standard" },
-  "26. Nov": { selected: "Vegetarisch" },
-  "27. Nov": { selected: undefined },
-  "28. Nov": { selected: "Fleisch" },
-  "29. Nov": { selected: "Vegetarisch" }
-}
-
 function colorFor(selected) {
   let f = food.filter(({ name }) => name === selected)
   return f.length > 0 ? f[0].color : "transparent"
@@ -68,16 +45,8 @@ function foodAfter(selected) {
 }
 
 class App extends Component {
-  state = {
-    ...days
-  }
-
   nextFood = (date, selected) => {
     let newFood = foodAfter(selected)
-
-    this.setState({
-      [date]: { selected: newFood }
-    })
 
     if (newFood) {
       this.props.orderFood({
@@ -92,26 +61,28 @@ class App extends Component {
 
   render() {
     let {
-      data: { hello }
+      data: { orders = [] }
     } = this.props
+
+    console.log(orders)
 
     return (
       <div className="App">
-        <h2>{hello}</h2>
+        <h2>Essen</h2>
         <ul>
-          {Object.entries(this.state).map(([date, { selected }]) => (
+          {orders.map(({ date, food }) => (
             <li
               key={date}
-              className={selected ? "" : "empty"}
-              onClick={() => this.nextFood(date, selected)}
+              className={food ? "" : "empty"}
+              onClick={() => this.nextFood(date, food)}
               style={{
-                backgroundColor: colorFor(selected),
-                borderColor: colorFor(selected),
-                backgroundImage: imageFor(selected)
+                backgroundColor: colorFor(food),
+                borderColor: colorFor(food),
+                backgroundImage: imageFor(food)
               }}
             >
               <span>{date}</span>
-              <span>{selected || "Nichts ausgewählt"}</span>
+              <span>{food || "Nichts ausgewählt"}</span>
             </li>
           ))}
         </ul>
@@ -122,8 +93,11 @@ class App extends Component {
 
 export default compose(
   graphql(gql`
-    query {
-      hello
+    query getOrders {
+      orders {
+        date
+        food
+      }
     }
   `),
   graphql(
@@ -132,7 +106,7 @@ export default compose(
         orderFood(date: $date, food: $food)
       }
     `,
-    { name: "orderFood" }
+    { name: "orderFood", options: { refetchQueries: ["getOrders"] } }
   ),
   graphql(
     gql`
@@ -140,6 +114,6 @@ export default compose(
         cancelFoodOrder(date: $date)
       }
     `,
-    { name: "cancelFoodOrder" }
+    { name: "cancelFoodOrder", options: { refetchQueries: ["getOrders"] } }
   )
 )(App)

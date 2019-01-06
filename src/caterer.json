@@ -1,0 +1,203 @@
+{
+  "units": {
+    "price": "cents",
+    "weight": "g",
+    "volume": "ml"
+  },
+  "nutrition": {
+    "brennwert-kcal": { "name": "Brennwert", "unit": "kcal" },
+    "brennwert-kj": { "name": "Brennwert", "unit": "kJ" },
+    "fett": { "name": "Fett", "unit": "g" },
+    "fettsäuren": { "name": "davon gesättigte Fettsäuren", "unit": "g" },
+    "kohlenhydrate": { "name": "Kohlenhydrate", "unit": "g" },
+    "zucker": { "name": "davon Zucker", "unit": "g" },
+    "ballaststoffe": { "name": "Ballaststoffe", "unit": "g" },
+    "eiweiß": { "name": "Eiweiß", "unit": "g" },
+    "salz": { "name": "Salz", "unit": "g" }
+  },
+  "allergenes": {
+    "gluten": {
+      "name": "Glutenhaltiges Getreide",
+      "description": "Weizen (wie Dinkel und Khorasan-Weizen), Roggen, Gerste, Hafer"
+    },
+    "krebstiere": { "name": "Krebstiere" },
+    "eier": { "name": "Eier" },
+    "fische": { "name": "Fische" },
+    "erdnüsse": { "name": "Erdnüsse" },
+    "sojabohnen": { "name": "Sojabohnen" },
+    "milch": { "name": "Milch (einschl. Laktose)" },
+    "schalenfrüchte": {
+      "name": "Schalenfrüchte",
+      "description": "Haselnuss, Walnuss, Cashewnuss, Pekannuss, Paranuss, Pistazie, Macadamianuss, Queenslandnuss, Mandeln"
+    },
+    "sellerie": { "name": "Sellerie" },
+    "senf": { "name": "Senf" },
+    "sesamsamen": { "name": "Sesamsamen" },
+    "schwefeldioxid": { "name": "Schwefeldioxid und Sulphite" },
+    "lupinen": { "name": "Lupinen" },
+    "weichtiere": { "name": "Weichtiere" }
+  },
+  "food": {
+    "soße-ketchup": {
+      "name": "Ketchup",
+      "classes": ["soße"],
+      "next": [
+        { "name": "Klassiker zu Ketchup", "items": [{ "class": "klassiker" }] }
+      ]
+    },
+    "soße-mayo": { "name": "Mayo", "classes": ["soße"] },
+    "big-mac": {
+      "name": "Big Mac",
+      "weight": 230,
+      "nutrition": {
+        "brennwert-kcal": 232,
+        "brennwert-kj": 972,
+        "fett": 12,
+        "fettsäuren": 4.5,
+        "kohlenhydrate": 19,
+        "zucker": 3.9,
+        "ballaststoffe": 1.4,
+        "eiweiß": 12,
+        "salz": 1
+      },
+      "allergenes": ["eier", "milch", "senf", "sesamsamen", "gluten"],
+      "classes": ["klassiker"]
+    },
+    "hamburger-royal-ts": {
+      "name": "Hamburger Royal TS",
+      "classes": ["klassiker"]
+    },
+    "filet-o-fish": { "name": "Filet-O-Fish", "classes": ["klassiker"] },
+    "chicken-mcnuggets-9er": {
+      "name": "Chicken McNuggets 9er",
+      "classes": ["klassiker"],
+      "next": [
+        { "name": "Soße zu Chicken McNuggets", "items": [{ "class": "soße" }] }
+      ]
+    },
+    "hamburger-royal-käse": {
+      "name": "Hamburger Royal Käse",
+      "classes": ["klassiker"]
+    },
+    "mcrib": { "name": "McRib", "classes": ["klassiker"] },
+    "mcchicken-classic": {
+      "name": "McChicken Classic",
+      "classes": ["klassiker"]
+    },
+    "mcwrap-chicken-caesar": {
+      "name": "McWrap Chicken Caesar",
+      "classes": ["klassiker"]
+    },
+    "big-tasty-bacon": { "name": "Big Tasty Bacon", "classes": ["klassiker"] },
+    "snack-salad-classic": { "name": "Snack Salad Classic" },
+    "pommes-frites-groß": {
+      "name": "Pommes Frites Groß",
+      "next": [
+        { "name": "Soße zu Pommes Frites", "items": [{ "class": "soße" }] }
+      ]
+    },
+    "softdrink-cola-0.5l": {
+      "name": "Cola 0.5l",
+      "classes": ["softdrink-0.5l"]
+    },
+    "softdrink-fanta-0.5l": {
+      "name": "Fanta 0.5l",
+      "classes": ["softdrink-0.5l"]
+    },
+    "softdrink-cola-0.4l": {
+      "name": "Cola 0.4l",
+      "classes": ["softdrink-0.4l"]
+    },
+    "softdrink-fanta-0.4l": {
+      "name": "Fanta 0.4l",
+      "classes": ["softdrink-0.4l"]
+    },
+    "lipton-ice-tea": { "name": "Lipton Ice Tea Peach 0.5l" },
+    "milchshake-vanille": {
+      "name": "Milchshake Vanille 0.4l",
+      "classes": ["milchshake"]
+    },
+    "milchshake-erdbeer": {
+      "name": "Milchshake Erdbeer 0.4l",
+      "classes": ["milchshake"]
+    },
+    "milchshake-schoko": {
+      "name": "Milchshake Schoko 0.4l",
+      "classes": ["milchshake"]
+    },
+    "fruity-lemonade-cherry": {
+      "name": "Fruity Lemonade Cool Cherry 0.4l",
+      "classes": ["fruity-lemonade"]
+    },
+    "fruity-lemonade-lemon": {
+      "name": "Fruity Lemonade Lemon Kiss 0.4l",
+      "classes": ["fruity-lemonade"]
+    },
+    "mccafe-grande": { "name": "McCafe Kaffee-Spezialität Grande" },
+    "vio-mineralwasser-still": {
+      "name": "Vio Mineralwasser still 0.5l",
+      "classes": ["vio-mineralwasser"]
+    },
+    "vio-mineralwasser-medium": {
+      "name": "Vio Mineralwasser medium 0.5l",
+      "classes": ["vio-mineralwasser"]
+    },
+    "orangensaft": { "name": "Orangensaft 0.25l" }
+  },
+  "menus": {
+    "mcmenü": {
+      "name": "McMenü",
+      "classes": ["groß"],
+      "price": 500,
+      "steps": [
+        {
+          "name": "Klassiker",
+          "items": [{ "class": "klassiker" }]
+        },
+        {
+          "name": "Beilage",
+          "amount": 2,
+          "items": [
+            { "class": "softdrink-0.5l" },
+            { "class": "milchshake" },
+            { "class": "fruity-lemonade" },
+            { "class": "pommes-groß" },
+            { "class": "vio-mineralwasser" },
+            { "id": "lipton-ice-tea" },
+            { "id": "mccafe-grande" },
+            { "id": "orangensaft" },
+            { "id": "snack-salad-classic" }
+          ]
+        },
+        {
+          "name": "Optional",
+          "pay": true,
+          "optional": true,
+          "items": [{ "class": "*" }]
+        }
+      ]
+    },
+    "mcmenü-small": {
+      "name": "McMenü Small",
+      "classes": ["klein"],
+      "steps": [
+        {
+          "name": "Klassiker",
+          "items": [{ "class": "klassiker" }]
+        },
+        {
+          "name": "Beilage",
+          "amount": 2,
+          "items": [
+            { "class": "softdrink-0.4l" },
+            { "class": "pommes-mittel" },
+            { "id": "snack-salad-classic" }
+          ]
+        }
+      ]
+    }
+  },
+  "plan": {
+    "predefined": "any-food-any-day"
+  }
+}
