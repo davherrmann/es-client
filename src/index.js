@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
-import App2 from "./App2"
+import App from "./App2"
 import * as serviceWorker from "./serviceWorker"
 
 import ApolloClient from "apollo-boost"
@@ -13,7 +13,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App2 />
+    <App />
   </ApolloProvider>,
   document.getElementById("root")
 )
