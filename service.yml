@@ -1,0 +1,58 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  # Unique key of the Deployment instance
+  name: deployment-example
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        # Apply this label to pods and default
+        # the Deployment label selector to this value
+        app: es-client
+    spec:
+      containers:
+        - name: es-client
+          # Run this image
+          image: eu.gcr.io/mensamax/es-client:3
+---
+kind: Service
+apiVersion: v1
+metadata:
+  # Unique key of the Service instance
+  name: es-client
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8043
+  selector:
+    # Loadbalance traffic across Pods matching
+    # this label selector
+    app: es-client
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: es-client
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    certmanager.k8s.io/cluster-issuer: "letsencrypt-prod"
+    certmanager.k8s.io/acme-challenge-type: http01
+
+spec:
+  tls:
+    - hosts:
+        - test.mensamax.de
+      secretName: test-mensamax-de-tls
+  rules:
+    - host: test.mensamax.de
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: es-client
+              servicePort: 80

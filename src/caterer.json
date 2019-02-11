@@ -40,9 +40,19 @@
   "food": {
     "soße-ketchup": {
       "name": "Ketchup",
-      "classes": ["soße"]
+      "classes": ["soße"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/balsamico_dressing_product_800x596.png"
     },
-    "soße-mayo": { "name": "Mayo", "classes": ["soße"] },
+    "soße-honig-senf": {
+      "name": "Honig-Senf",
+      "classes": ["soße"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/honing-mosterd_dressing_product_800x596.png"
+    },
+    "soße-mayo": {
+      "name": "Mayo",
+      "classes": ["soße"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/800x596_61.png"
+    },
     "big-mac": {
       "name": "Big Mac",
       "weight": 230,
@@ -58,89 +68,131 @@
         "salz": 1
       },
       "allergenes": ["eier", "milch", "senf", "sesamsamen", "gluten"],
-      "classes": ["klassiker"]
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/115145_categorie_website_single_800x596.png"
     },
     "hamburger-royal-ts": {
       "name": "Hamburger Royal TS",
-      "classes": ["klassiker"]
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/115145_categorie_website_double_800x596.png"
     },
-    "filet-o-fish": { "name": "Filet-O-Fish", "classes": ["klassiker"] },
+    "filet-o-fish": {
+      "name": "Filet-O-Fish",
+      "classes": ["klassiker"],
+      "imgURL": "https://m.mcdonalds.nl/sites/default/files/produits/800x596_chicken_sensation.png"
+    },
     "chicken-mcnuggets-9er": {
       "name": "Chicken McNuggets 9er",
       "classes": ["klassiker"],
+      "imgURL": "https://m.mcdonalds.nl/sites/default/files/produits/800x596_chicken_nuggets_9st.png",
       "next": [
         { "name": "Soße zu Chicken McNuggets", "items": [{ "class": "soße" }] }
       ]
     },
     "hamburger-royal-käse": {
       "name": "Hamburger Royal Käse",
-      "classes": ["klassiker"]
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/product_type/bigmac_800x596.png"
     },
-    "mcrib": { "name": "McRib", "classes": ["klassiker"] },
+    "mcrib": {
+      "name": "McRib",
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/110220_beef_800x596.png"
+    },
     "mcchicken-classic": {
       "name": "McChicken Classic",
-      "classes": ["klassiker"]
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/mcmuffin_800x596px_3.png"
     },
     "mcwrap-chicken-caesar": {
       "name": "McWrap Chicken Caesar",
-      "classes": ["klassiker"]
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/mcwrap_blt_800x596.png"
     },
-    "big-tasty-bacon": { "name": "Big Tasty Bacon", "classes": ["klassiker"] },
-    "snack-salad-classic": { "name": "Snack Salad Classic" },
+    "big-tasty-bacon": {
+      "name": "Big Tasty Bacon",
+      "classes": ["klassiker"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/113218_categorie_website800x596.png"
+    },
+    "snack-salad-classic": {
+      "name": "Snack Salad Classic",
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/product_type/113218_product_menu_800x596_3.png"
+    },
     "pommes-frites-groß": {
       "name": "Pommes Frites Groß",
       "classes": ["pommes-groß"],
       "next": [
         { "name": "Soße zu Pommes Frites", "items": [{ "class": "soße" }] }
-      ]
+      ],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/800x596_kleine_franse_frietjes.png"
     },
     "softdrink-cola-0.5l": {
       "name": "Cola 0.5l",
-      "classes": ["softdrink-0.5l"]
+      "classes": ["softdrink-0.5l"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/beeld800x596-frisdranken-coca_cola_zero_middel.png"
     },
     "softdrink-fanta-0.5l": {
       "name": "Fanta 0.5l",
-      "classes": ["softdrink-0.5l"]
+      "classes": ["softdrink-0.5l"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/beeld800x596-frisdranken-fanta_middel_0.png"
     },
     "softdrink-cola-0.4l": {
       "name": "Cola 0.4l",
-      "classes": ["softdrink-0.4l"]
+      "classes": ["softdrink-0.4l"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/beeld800x596-frisdranken-coca_cola_zero_klein.png"
     },
     "softdrink-fanta-0.4l": {
       "name": "Fanta 0.4l",
-      "classes": ["softdrink-0.4l"]
+      "classes": ["softdrink-0.4l"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/beeld800x596-frisdranken-fanta_klein.png"
     },
-    "lipton-ice-tea": { "name": "Lipton Ice Tea Peach 0.5l" },
+    "lipton-ice-tea": {
+      "name": "Lipton Ice Tea Peach 0.5l",
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/beeld800x596-frisdranken-ice_tea_groot.png"
+    },
     "milchshake-vanille": {
       "name": "Milchshake Vanille 0.4l",
-      "classes": ["milchshake"]
+      "classes": ["milchshake"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/800x596_milk_shake_vanille_medium.png"
     },
     "milchshake-erdbeer": {
       "name": "Milchshake Erdbeer 0.4l",
-      "classes": ["milchshake"]
+      "classes": ["milchshake"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/800x596_aardbei_large.png"
     },
     "milchshake-schoko": {
       "name": "Milchshake Schoko 0.4l",
-      "classes": ["milchshake"]
+      "classes": ["milchshake"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/800x596_chocolade_large.png"
     },
     "fruity-lemonade-cherry": {
       "name": "Fruity Lemonade Cool Cherry 0.4l",
-      "classes": ["fruity-lemonade"]
+      "classes": ["fruity-lemonade"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/smoothie-aardbei-banaan-800x596.png"
     },
     "fruity-lemonade-lemon": {
       "name": "Fruity Lemonade Lemon Kiss 0.4l",
-      "classes": ["fruity-lemonade"]
+      "classes": ["fruity-lemonade"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/jus-orange-800x596.png"
     },
-    "mccafe-grande": { "name": "McCafe Kaffee-Spezialität Grande" },
+    "mccafe-grande": {
+      "name": "McCafe Kaffee-Spezialität Grande",
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/dubbele_espresso_800x596px.png"
+    },
     "vio-mineralwasser-still": {
       "name": "Vio Mineralwasser still 0.5l",
-      "classes": ["vio-mineralwasser"]
+      "classes": ["vio-mineralwasser"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/spa_800x596_0.png"
     },
     "vio-mineralwasser-medium": {
       "name": "Vio Mineralwasser medium 0.5l",
-      "classes": ["vio-mineralwasser"]
+      "classes": ["vio-mineralwasser"],
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/112130_spa_rood_800x596.png"
     },
-    "orangensaft": { "name": "Orangensaft 0.25l" }
+    "orangensaft": {
+      "name": "Orangensaft 0.25l",
+      "imgURL": "https://www.mcdonalds.nl/sites/default/files/produits/apple_800x596.png"
+    }
   },
   "menus": {
     "mcmenü": {
@@ -156,30 +208,30 @@
           "name": "1. Beilage",
           "amount": 2,
           "items": [
+            { "class": "pommes-groß" },
+            { "id": "snack-salad-classic" },
             { "class": "softdrink-0.5l" },
             { "class": "milchshake" },
             { "class": "fruity-lemonade" },
-            { "class": "pommes-groß" },
             { "class": "vio-mineralwasser" },
             { "id": "lipton-ice-tea" },
             { "id": "mccafe-grande" },
-            { "id": "orangensaft" },
-            { "id": "snack-salad-classic" }
+            { "id": "orangensaft" }
           ]
         },
         {
           "name": "2. Beilage",
           "amount": 2,
           "items": [
+            { "class": "pommes-groß" },
+            { "id": "snack-salad-classic" },
             { "class": "softdrink-0.5l" },
             { "class": "milchshake" },
             { "class": "fruity-lemonade" },
-            { "class": "pommes-groß" },
             { "class": "vio-mineralwasser" },
             { "id": "lipton-ice-tea" },
             { "id": "mccafe-grande" },
-            { "id": "orangensaft" },
-            { "id": "snack-salad-classic" }
+            { "id": "orangensaft" }
           ]
         },
         {

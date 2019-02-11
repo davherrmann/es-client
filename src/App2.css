@@ -12,7 +12,6 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  overflow: scroll;
 }
 
 ul::after {
@@ -37,6 +36,9 @@ label > span {
   border: 2px solid transparent;
   border-radius: 4px;
   font-variant: small-caps;
+  background-size: 100%;
+  background-position: center 3em;
+  background-repeat: no-repeat;
 }
 
 input[type="radio"] {

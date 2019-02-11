@@ -2,6 +2,9 @@ import React from "react"
 import caterer from "./caterer.json"
 import "./App2.css"
 
+// good image search:
+// https://www.google.com/search?q=site:www.mcdonalds.nl&rlz=1C1CHBF_deDE827DE827&biw=1540&bih=1329&tbm=isch&source=lnt&tbs=isz:ex,iszw:800,iszh:596
+
 function insert(steps, newSteps, n) {
   return [...steps.slice(0, n), ...newSteps, ...steps.slice(n)]
 }
@@ -108,7 +111,13 @@ class App extends React.Component {
                     onClick={this.select}
                     checked={!!selected && selected === item.key}
                   />
-                  <span>{item.name}</span>
+                  <span
+                    style={{
+                      backgroundImage: `url("${item.imgURL}")`
+                    }}
+                  >
+                    {item.name}
+                  </span>
                 </label>
               </li>
             ))}
