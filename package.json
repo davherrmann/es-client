@@ -20,6 +20,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "prettier": {
+    "semi": false
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
